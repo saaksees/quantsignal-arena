@@ -6,6 +6,8 @@ A high-performance, vectorized backtesting system for quantitative trading signa
 
 from .data_loader import DataLoader
 from .signal_base import SignalBase, MomentumSignal
+from .engine import BacktestEngine
+from .metrics import MetricsCalculator
 
-__all__ = ['DataLoader', 'SignalBase', 'MomentumSignal']
+__all__ = ['DataLoader', 'SignalBase', 'MomentumSignal', 'BacktestEngine', 'MetricsCalculator']
 __version__ = '0.1.0'
