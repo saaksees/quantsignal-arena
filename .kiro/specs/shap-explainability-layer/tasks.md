@@ -7,7 +7,7 @@ This plan implements the SHAP Explainability Layer for QuantSignal Arena, adding
 ## Tasks
 
 - [x] 1. Implement SignalExplainer core functionality
-  - [ ] 1.1 Create SignalExplainer class with initialization and feature engineering
+  - [x] 1.1 Create SignalExplainer class with initialization and feature engineering
     - Create `backend/shap_layer/explainer.py` with SignalExplainer class
     - Implement `__init__` method accepting signal, use_lightgbm, n_estimators, random_state parameters
     - Implement `engineer_features` method computing all 8 technical features from OHLCV data
@@ -23,7 +23,7 @@ This plan implements the SHAP Explainability Layer for QuantSignal Arena, adding
     - Verify output DataFrame has matching DatetimeIndex with no NaN values
     - Tag: `# Feature: shap-explainability-layer, Property 1: Feature Engineering Correctness`
 
-  - [ ] 1.3 Implement SHAP explanation generation
+  - [x] 1.3 Implement SHAP explanation generation
     - Implement `explain` method in SignalExplainer class
     - Train LightGBM classifier (or RandomForest fallback) to predict signal direction (1 vs -1)
     - Filter training data to exclude neutral positions (signal == 0)
@@ -48,7 +48,7 @@ This plan implements the SHAP Explainability Layer for QuantSignal Arena, adding
     - Verify only samples with signal values 1 or -1 are included
     - Tag: `# Feature: shap-explainability-layer, Property 3: Signal Filtering for Training`
 
-  - [ ] 1.6 Implement top features extraction
+  - [x] 1.6 Implement top features extraction
     - Implement `get_top_features` method in SignalExplainer class
     - Accept parameter n for number of top features to return
     - Return list of dicts with keys: name, mean_shap, direction
@@ -78,7 +78,7 @@ This plan implements the SHAP Explainability Layer for QuantSignal Arena, adding
 - [ ] 2. Checkpoint - Verify SignalExplainer implementation
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 3. Implement DriftDetector core functionality
+- [x] 3. Implement DriftDetector core functionality
   - [ ] 3.1 Create DriftDetector class with PSI computation
     - Create `backend/shap_layer/drift_detector.py` with DriftDetector class
     - Implement `__init__` method accepting signal, reference_window, detection_window, n_bins parameters
