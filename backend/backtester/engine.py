@@ -133,8 +133,9 @@ class BacktestEngine:
         ohlcv_data: pd.DataFrame
     ) -> None:
         """Validate signal and OHLCV data before backtesting."""
-        # Check signal is SignalBase instance
-        if not isinstance(signal, SignalBase):
+        # Check signal is SignalBase instance using MRO name check
+        base_class_names = [c.__name__ for c in type(signal).__mro__]
+        if "SignalBase" not in base_class_names:
             raise ValueError(f"signal must be a SignalBase instance, got {type(signal)}")
         
         # Check OHLCV data is DataFrame
