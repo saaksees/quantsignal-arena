@@ -11,7 +11,7 @@ import shap
 from sklearn.ensemble import RandomForestClassifier
 import logging
 
-from backend.backtester.signal_base import SignalBase
+from backtester.signal_base import SignalBase
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
