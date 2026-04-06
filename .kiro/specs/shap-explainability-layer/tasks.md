@@ -79,7 +79,7 @@ This plan implements the SHAP Explainability Layer for QuantSignal Arena, adding
   - Ensure all tests pass, ask the user if questions arise.
 
 - [x] 3. Implement DriftDetector core functionality
-  - [ ] 3.1 Create DriftDetector class with PSI computation
+  - [x] 3.1 Create DriftDetector class with PSI computation
     - Create `backend/shap_layer/drift_detector.py` with DriftDetector class
     - Implement `__init__` method accepting signal, reference_window, detection_window, n_bins parameters
     - Implement `compute_psi` method calculating Population Stability Index
@@ -106,7 +106,7 @@ This plan implements the SHAP Explainability Layer for QuantSignal Arena, adding
     - Verify drift_level is "significant" if PSI > 0.2
     - Tag: `# Feature: shap-explainability-layer, Property 6: PSI Classification Thresholds`
 
-  - [ ] 3.4 Implement drift detection with window splitting
+  - [x] 3.4 Implement drift detection with window splitting
     - Implement `detect` method in DriftDetector class
     - Split OHLCV data into reference period (first reference_window days) and recent period (last detection_window days)
     - Generate signal values for both periods using signal instance
@@ -150,7 +150,7 @@ This plan implements the SHAP Explainability Layer for QuantSignal Arena, adding
     - Verify recommendation is "consider retraining" if drift_level is "significant"
     - Tag: `# Feature: shap-explainability-layer, Property 10: Recommendation Mapping`
 
-  - [ ] 3.9 Implement rolling PSI analysis
+  - [x] 3.9 Implement rolling PSI analysis
     - Implement `rolling_psi` method in DriftDetector class
     - Accept ohlcv_data and metric parameter ("signal" or "returns")
     - Compute PSI on rolling windows across OHLCV data
@@ -178,7 +178,7 @@ This plan implements the SHAP Explainability Layer for QuantSignal Arena, adding
 - [ ] 4. Checkpoint - Verify DriftDetector implementation
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 5. Implement ReportBuilder core functionality
+- [x] 5. Implement ReportBuilder core functionality
   - [ ] 5.1 Create ReportBuilder class with PDF generation
     - Create `backend/shap_layer/report_builder.py` with ReportBuilder class
     - Implement `__init__` method accepting output_dir, page_width, page_height parameters
